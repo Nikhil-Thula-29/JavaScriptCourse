@@ -1,0 +1,139 @@
+<!-- Arrow Functions:
+The function without name called as Anonymous function.
+Anonymous functions also called as arrow Functions
+arrow functions behaves like callback function
+we will represent arrow fucntion with =>
+arrow function introduced in es6 -->
+
+<!-- syntax
+1.function definition
+2.function calling
+
+var/let/const variablename=(arg1,arg2,arg3,....argn)=>{
+    //bussiness logic
+}
+
+variable(para1,para2,.....paran); -->
+
+
+<!-- <script>
+    let fun_one=()=>{
+        return "Hello";
+    }
+    console.log(fun_one);   //fun def
+    console.log(fun_one()); //Hello
+
+</script> -->
+
+<!-- <script>
+    let fun_one=()=>"Hello";
+    console.log(fun_one());
+</script> -->
+
+<!-- <script>
+    let fun_one=(arg1,arg2,arg3)=>{
+        console.log(arg1,arg2,arg3)
+    }
+    fun_one("Hello1","Hello2","Hello3");//Hello1 Hello2 Hello3
+    fun_one();//undefined undefined undefined
+    fun_one(null,null,null);    //null null null
+</script> -->
+
+<!-- <script>
+    let fun_one=(arg1,arg2,arg3)=>{
+        console.log(arg1(),arg2(),arg3());  //to get values bcz they are fun def we are calling arg1(),...
+    }
+    fun_one(()=>{
+        return "Hello1"
+    },()=>{
+        return "Hello2"
+    },()=>{
+        return "Hello3"         //Hello1 Hello2 Hello3
+    });
+</script> -->
+
+<!-- <script>
+    let intilize=(user,getElementsByEmail,getElementsById)=>{
+        console.log(user,getElementsByEmail,getElementsById);   //getElementsByEmail if write only this then it will only definition if we want o/p write getElementsByEmail()
+    };
+
+    let getElementsByEmail=()=>{    
+        return "hr@nikhl.com";
+    }
+
+    let getElementsById=()=>{
+        return "Nikhil thula";
+    }
+
+    intilize("Hello1",getElementsByEmail(),getElementsById());
+</script> -->
+
+<!-- <script>
+    let arr=[];
+    for(let i=0;i<5;i++){
+        arr.push(()=>{
+            return "Hello";
+        })
+    }
+
+    for(let j=0;j<arr.length;j++){
+        console.log(arr[j]());
+    }
+    //console.log(arr[0]());
+</script> -->
+
+<!-- IIFE
+Immediate Invokable Functional Expression
+es9
+these functions called as self invokable Functions
+
+syntax
+((arg1,arg2,arg3,.....,argn)=>{
+
+})(para1,para2,para3,.....paran); -->
+
+<!-- <script>
+    (()=>{      //Direct function calling in iife
+        console.log("Welcome to IIFE");     
+    })();
+</script> -->
+
+
+<script>
+    let msg=(()=>{
+        return "welcome to iife";
+    })();
+    console.log(msg);
+</script>
+
+
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log(arg1,arg2,arg3);
+    }
+    fun_one((()=>{
+        return "Hellooo"
+    })());
+</script>
+
+
+<script>
+    ((arg1,arg2)=>{
+        console.log(arg1,arg2);
+    })("vijay","ajay");
+</script>
+
+<script>
+    for(let i=0;i<5;i++){
+        
+    setTimeout(()=>{
+        console.log(i)
+    },2000);
+
+    }
+   
+</script>
+
+
+<!-- constructor functions -->
+

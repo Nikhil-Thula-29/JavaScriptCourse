@@ -1,0 +1,196 @@
+<!-- <script>
+    function fun_one(){
+        return "Welcome to javascript";
+    }
+
+   console.log(fun_one()); 
+</script> -->
+
+<!-- <script>
+
+    function fun_one(){
+        return "Hello";
+    }
+    console.log(fun_one);
+
+</script> -->
+
+
+<!-- <script>
+
+    function fun_one(arg1,arg2){
+        console.log(arg1,arg2);
+    }
+
+    fun_one("vamshi","shiva");
+    fun_one("vamshi","shiva");
+    fun_one("vamshi","shiva");
+    fun_one();  //undefined
+    fun_one(null,null); 
+    fun_one(undefined,"harish"); 
+
+</script> -->
+
+<!-- <script>
+    function fun_one(){
+        return fun_two;     //check no bracket thatwhy ()()
+    }
+
+    function fun_two(){
+        return "Hello";
+    }
+    console.log(fun_one()());
+</script> -->
+
+<!-- 
+<script>
+    let arr=[];
+    function fun_one(){
+        return "Hello";
+    }
+    for(let i=0;i<5;i++){
+        arr.push(fun_one());
+    }
+    for(let j=0;j<arr.length;j++){
+       console.log(arr[j]);
+    }
+</script> -->
+
+
+<!-- <script>
+    let arr=[];
+    function fun_one(){
+        return "Hello";
+    }
+    for(let i=0;i<5;i++){
+        arr.push(fun_one);
+    }
+    for(let j=0;j<arr.length;j++){
+        console.log(arr[j]());  //hello
+    }
+</script> -->
+
+
+<!-- <script>
+    function fun_one(){
+        return "Hello";
+    }
+    //it is executed only once that is setTimeout
+    setTimeout(function(){
+        console.log(fun_one());
+    },3000);
+</script> -->
+
+
+
+
+<!-- If we want to execute the function for every interval of time we need to use setInterval -->
+<!-- <script>
+    function fun_one(){
+        return "Hello";
+    }
+    setInterval(function(){
+        console.log(fun_one());
+    },3000);
+</script> -->
+
+
+<!-- <script>
+    for(let i=0;i<5;i++){
+        setTimeout(function(){
+            console.log(i);
+        },3000);
+    }
+
+//var : 5 5 5 5 5
+//let : 0 1 2 3 4 
+</script> -->
+
+
+<!-- <script>
+    function randomfun(){
+        for(var i=0;i<1;i++){
+            setTimeout(function(){
+                console.log(i);
+            },1000);
+            setTimeout(function(){
+                console.log(i);
+            },1000);
+        }
+
+    }
+    randomfun();
+</script> -->
+
+
+
+<!-- Rest parameters in Functions
+1)We can take only one spread operator per function (…arg1) same as varargs in java
+2)position of sread operator always last in occurances		(arg1,...arg2)
+ -->
+<!-- <script>
+    function fun_one(...arg1){      //this ...is called "spread operator" Rest Parameter same as var agrs there we keep at the end
+        console.log(arg1);           //we can take only one spread operator ...arg1...arg2 error
+    };
+    fun_one("Hello1","Hello2");
+    fun_one("Hello1","Hello2","Hello3");
+    fun_one();
+</script> -->
+
+
+<!-- <script>
+    function fun_one(arg1,...arg2){
+        console.log(arg1,arg2);
+    };
+    fun_one();      //undefined[]
+    fun_one(undefined); //undefined[]
+    fun_one("Hello");   //Hello[]
+    fun_one("Hello1","Hello2","Hello3");//Hello ['Hello2','Hello3']
+</script> -->
+
+
+
+<!-- <script>
+    function fun_one(...arg1,arg2){     //error ...arg1 should be last parameter
+    }
+</script> -->
+
+<!-- Default parameters in function -->
+<!-- While defining the functions, we will assign some default values to parameters. -->
+<!--  <script>
+    function fun_one(arg1="Hello1",arg2="Hello2"){
+        console.log(arg1,arg2);
+    }
+    fun_one();  //Hello1,Hello2
+    fun_one("ReactJS"); //ReactJS,Hello2
+    fun_one(undefined,undefined); //Hello1,Hello2
+    fun_one(null,null); //null,null
+    fun_one(undefined,"Welcome"); //Hello1,Welcome
+ </script> -->
+
+
+ <!-- <script>
+    function fun_one(arg1,arg2="Hello2"){
+        console.log(arg1,arg2);
+    }
+    fun_one();  //undefined 'Hello2'
+    fun_one(undefined); //undefined'Hello2'
+    fun_one('Hello1'); //hello1,hello2
+    fun_one(null);//null,hello2
+    fun_one(undefined,undefined);   //undefined,hello2
+    fun_one(null,null); //null null
+ </script> -->
+
+<!-- <script>
+    function fun_one(arg1,arg2="Hello",...arg3){
+        console.log(arg1,arg2,arg3);
+    }
+    fun_one();      //undefined 'Hello' []
+    fun_one(undefined,undefined,undefined); //undefined,Hello,[undefined]
+    fun_one(null,null,null);    //null null [null]
+    fun_one("Hello1",undefined,"Hello3");
+</script> -->
+
+
+
+
