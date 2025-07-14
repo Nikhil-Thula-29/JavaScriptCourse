@@ -99,15 +99,15 @@ syntax
 </script> -->
 
 
-<script>
+<!-- <script>
     let msg=(()=>{
         return "welcome to iife";
     })();
     console.log(msg);
-</script>
+</script> -->
 
 
-<script>
+<!-- <script>
     function fun_one(arg1,arg2,arg3){
         console.log(arg1,arg2,arg3);
     }
@@ -115,9 +115,9 @@ syntax
         return "Hellooo"
     })());
 </script>
+ -->
 
-
-<script>
+<!-- <script>
     ((arg1,arg2)=>{
         console.log(arg1,arg2);
     })("vijay","ajay");
@@ -132,8 +132,271 @@ syntax
 
     }
    
-</script>
+</script> -->
 
 
-<!-- constructor functions -->
+<!-- constructor functions
+-construcotr functions used to create the classes like structures before es6
+-in constructor functions(variabels and functions) shoul start with this keyword
+-this keyword representing the "current" class members
+we will create the object with the help of "new" keyword-->
+
+
+
+<!-- -It is same as class in java but use this keyword for variables and functions-->
+<!-- <script>
+    function class_one(){
+        this.sub_one="react";
+        this.sub_two="angular";
+    };
+    let obj1=new class_one();
+    console.log(obj1.sub_one);
+    console.log(obj1.sub_two);
+
+     let obj2=new class_one();
+    console.log(obj2.sub_one);
+    console.log(obj2.sub_two);
+</script> -->
+
+<!-- <script>
+    function class_one(){
+        this.wish="JavaScript";
+        this.my_fun=function(){     //function using this keyword
+            return `welcome to ${this.wish}`;
+        };
+    };
+    let obj1=new class_one();
+    console.log(obj1.my_fun()); //welcome to javascript
+</script> -->
+
+<!-- <script>
+    function class_one(){
+        this.var_one="Hello1";
+        this.var_two="Hello2";
+        this.var_three="Hello3";    //variables by this keyword
+        this.fun_one=function(){    //function  by this keyword
+            return this.var_one;
+        }
+        this.fun_two=function(){
+            return this.var_two;
+        }
+        this.fun_three=function(){
+            return this.var_three;
+        }
+    }
+    let obj1=new class_one();
+    console.log(
+    obj1.fun_one(),
+    obj1.fun_two(),
+    obj1.fun_three());
+</script> -->
+
+
+<!-- <script>
+    function class_one(arg1,arg2,arg3){
+        this.var_one=arg1;
+        this.var_two=arg2;
+        this.var_three=arg3;
+
+    }
+    let obj1=new class_one("Hello1","Hellooo2","Hello3");
+    console.log(obj1.var_one,obj1.var_two,obj1.var_three);  //Hello1 Hellooo2 Hello3
+
+
+    let obj2=new class_one("Kiran","vamshi","venkat");  
+    console.log(obj2.var_one,obj2.var_two,obj2.var_three);  //Kiran vamshi venkat
+</script> -->
+
+<!-- 
+<script>
+    function class_one(){
+
+    };
+    class_one.prototype.var_one="Hello1";
+    let obj1=new class_one();
+    console.log(obj1.var_one);
+</script> -->
+
+<!-- <script>
+    function class_one(){
+
+    };
+    class_one.prototype.sub="JS";   //prototype is used to assign the values after the function declaring
+    class_one.prototype.fun_one=function(){
+        return "Hello";
+    }
+    let obj1=new class_one();
+    console.log(obj1.sub);
+    console.log(obj1.fun_one());
+</script> -->
+
+
+<!-- <script>
+    function class_one(){
+
+    };
+    class_one.prototype.var_one="Hello1";
+    function class_two(){
+        
+    };
+    class_two.prototype=Object.create(class_one.prototype); //making classone as parent for classtwo with Object.create keyword
+    class_two.prototype.var_two="Hello2";
+    let obj1=new class_two();   //here var_one will get from parent class_one
+    console.log(obj1.var_one,obj1.var_two);
+</script> -->
+
+<!-- <script>
+    function class_one(){
+
+    }
+    class_one.prototype.fun_one=function(){
+        return "Hello1";
+    }
+
+    function class_two(){
+
+    }
+    class_two.prototype=Object.create(class_one.prototype);
+    class_two.prototype.fun_two=function(){
+        return "Hello2";
+    }
+
+    function class_three(){
+
+    }
+    class_three.prototype=Object.create(class_two.prototype);
+    class_three.prototype.fun_three=function(){
+        return "Hello3";
+    }
+    let obj1=new class_one();
+    console.log(obj1.fun_one());    //Hello1
+    let obj2=new class_two();
+    console.log(obj2.fun_one(),obj2.fun_two());  //Hello1 Hello2
+    let obj3=new class_three();
+    console.log(obj3.fun_one(),obj3.fun_two(),obj3.fun_three());//Hello1 Hello2 Hello3
+</script> -->
+
+
+<!-- <script>
+    function class_one(){
+
+    }
+    class_one.prototype.dbFun=function(){
+        return "Data is from oracle db";
+    }
+    function class_two(){
+
+    }
+    class_two.prototype=Object.create(class_one.prototype);//inheritance
+    class_two.prototype.dbFun=function(){
+        return "Data is from Mongoodb";
+    }
+    let obj1=new class_two();
+    console.log(obj1.dbFun());
+</script> -->
+
+<!-- Generators
+Generators controls the statement in Functions
+Generator should have *
+Each statement should have yield statement
+Generators will return cursor mechanism
+by using cursors we can control statement 
+
+ex: line 1—1 st execution 
+line 2	--4th
+line 3 –2 nd
+line 4—5th 
+line 5—3rd
+like this by generators we can control flow
+-->
+
+<!-- <script>
+    function *fun_one(){
+        yield "stmt-1";
+        yield "stmt-2";
+        yield "stmt-3";
+        yield "stmt-4";
+
+    }
+    let cursor=fun_one();   //cursor position is above fun_one();
+    console.log(cursor.next()); //goes line by line
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+</script> -->
+<!-- o/p
+{value: 'stmt-1', done: false}  //stmt one say false bcz behind me there is one more st2
+{value: 'stmt-2', done: false}  //stmt one say false bcz behind me there is one more st3
+{value: 'stmt-3', done: false}  //stmt one say false bcz behind me there is one more st4
+{value: 'stmt-4', done: false}  .....
+{value: undefined, done: true}  .....  returns true no behind stmt-->
+
+<!-- <script>
+    function *fun_one(){
+        yield 100;
+        yield 200;
+        return 300;
+        yield 400;
+    }
+    let cursor=fun_one();
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+</script> -->
+
+<!-- o/p
+{value: 100, done: false}
+{value: 200, done: false}
+{value: 300, done: true} 
+{value: undefined, done: true} 400 not executed due to return-->   
+
+
+<!-- <script>
+    function *fun_one(){
+        yield 100;
+        yield *fun_two();
+        yield *fun_three();
+        yield 400;
+    }
+    function *fun_two(){
+        yield 300;
+    }
+    function *fun_three(){
+        yield 200;
+    }
+    let cursor=fun_one();
+    for(let i=0;i<5;i++){
+        console.log(cursor.next());     //rem next keyword
+    }
+
+</script> -->
+
+Optional parameter
+-while calling the functions we will make few parameters as Optional
+-this concept introduced in es6
+-optional parameters we will represent with ?
+-optional parameters will work in Typescript 
+-supersert of javascript called as Typescript
+-we will save typescritp files with .ts extension
+-Typescritp follows the OOPS
+-Typescript is programming language.
+-browsers wont understand typescript
+-conversion from typescript to equalent javascript called as transpilation.
+
+Installation of Typescipt 
+npm install -g typescript 
+npm stands for node package manager
+-g stands for global Installation
+
+transpilation
+---------------
+tsc demo.ts (tsc->typescript compiler)
+o/p
+demo.js
+node demo.js to execute
+
+
+
 

@@ -1,0 +1,188 @@
+<!-- passing one function def to another function argument is called callback -->
+
+<!-- <script>
+    function fun_one(arg1){
+        console.log(arg1);            
+        console.log(arg1());
+    }
+    function fun_two(){     
+        return "Welcome to callbacks";
+    }
+    fun_one(fun_two);
+</script> -->
+
+<!-- o/p
+1)fun_two(){
+        return "Welcome to callbacks";
+}
+2)Welcome to callbacks -->
+
+<!-- <script>
+    function fun_one(arg1,arg2,arg3){
+        console.log(arg1(),arg2(),arg3());  //Hello1 Hello2 Hello3
+    };
+    fun_one(function fun_two(){
+        return "Hello1";
+    },function fun_three(){
+        return "Hello2";
+    },function fun_four(){
+        return "Hello3";
+    });
+</script> -->
+
+
+<!-- <script>
+    function fun_one(arg1){
+        return arg1("Hello");
+    };
+    fun_one(function fun_two(arg1){
+        console.log(arg1);
+    });
+</script> --> 
+
+<!-- <script>
+    function fun_one(arg1,arg2,arg3){
+        return arg1("Hello1")+"......"+arg2("Hello2")+"....."+arg3("Hello3");
+    }
+    fun_one(function fun_two(arg1){
+        console.log(arg1);  //Hello1
+    },function fun_three(arg1){
+        console.log(arg1);  //Hello2
+    },function fun_four(arg1){
+        console.log(arg1);  //Hello3
+    });
+</script> -->
+
+<!-- 
+<script>
+    function fun_one(arg1){
+        return arg1(fun_three);
+    };
+    function fun_two(arg2){
+        return arg2("Hello");
+    }
+    function fun_three(arg3){
+        console.log(arg3);
+    }
+    fun_one(fun_two); //first this
+</script> -->
+
+<!-- <script>
+    function calc(num,add){ //add() it is addition function
+        return add(num+5,false);       
+    }
+    function addition(addRes,error){
+        if(!error){
+           console.log(addRes); 
+        }
+    }
+    calc(5,addition);   //jhere addition is def and it has two paras so use add(arg1,arg2) use two params
+
+</script> -->
+
+
+<!-- day 2 -->
+
+<!-- <script>
+    function fun_one(arg1){
+        console.log(arg1());
+    };
+    function fun_two(){
+        return "Hello";
+    }
+    fun_one(fun_two)
+</script> -->
+
+<!-- <script>
+    function fun_one(arg1,arg2,arg3){
+        console.log(arg1());
+        console.log(arg2());
+        console.log(arg3());
+    };
+    function fun_two(){
+        return "Hello1";
+    }
+    function fun_three(){
+        return "Hello2";
+    }
+    function fun_four(){
+        return "Hello3";
+    }
+    fun_one(fun_two,fun_three,fun_four);
+</script> -->
+
+<!-- <script>
+    function fun_one(arg1){
+        console.log(arg1());
+    };
+    fun_one(function fun_two(){
+        return "Hello";
+    });
+</script> -->
+
+<!-- <script>
+    function fun_one(arg1){
+        return arg1("Helloooo");
+    };
+    fun_one(function fun_two(param1){
+        console.log(param1);
+    });
+</script> -->
+
+<!-- <script>
+    function fun_one(arg1,arg2,arg3){
+        return arg1("Hello1")+"...."+arg2("Hello2")+"....."+arg3("Hello3");
+    };
+    fun_one(function fun_two(para1){
+        console.log(para1);
+    },function fun_two(para2){
+        console.log(para2);
+    },function fun_three(para3){
+        console.log(para3);
+    });
+</script> -->
+
+<!-- <script>
+    function fun_one(posRes,errorRes){
+        return posRes("sucess")+"...."+errorRes("error");
+    };
+    fun_one((para1)=>{
+        console.log(para1);
+    },(para2)=>{
+        console.log(para2);
+    })
+</script> -->
+
+
+<!-- Example for callback hell -->
+<script>
+    let cal=(num,add)=>{
+        return add(num+5,false);
+    };
+    let sub=(num,callback)=>{
+        return callback(num-3,false);
+    };
+    let mul=(num,callback)=>{
+        return callback(num*2,false);
+    }
+    let div=(num,callback)=>{
+        return callback(num/2,false);
+    }
+    cal(5,(addRes,error)=>{
+        if(!error){
+            sub(addRes,(subRes,error)=>{
+                if(!error){
+                    mul(subRes,(mulRes,error)=>{
+                        if(!error){
+                            div(mulRes,(divRes,error)=>{
+                                 console.log(divRes);
+                            })
+                        } 
+                    })
+                }
+            })
+        }
+    })
+</script>
+
+<!-- callback hell is not recommended and need to use promises for that -->
