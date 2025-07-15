@@ -1,0 +1,116 @@
+<!-- Important -->
+<!-- <script>
+    let obj={"key1":"Helloo1"};
+    console.log(typeof obj);    //object
+    /* to convert object to string we have JSON.stringify rem stringify means converting to string */
+    let str=JSON.stringify(obj);
+    console.log(typeof str);    //string
+</script> -->
+
+
+
+
+<!-- Here JSON.parse is used to convert string to object rem imp -->
+<!-- <script>
+    let str = "{\"name\":\"nikhil\"}"; //write in single line and use \
+    console.log(typeof str);    //string
+    let obj=JSON.parse(str);
+    console.log(typeof obj);    //object
+</script> -->
+
+<!-- 1.JSON.stringify()->obj to string
+2.JSON.parse()->string to obj -->
+
+<!-- <script>
+    let obj={
+        "key1":"Hellooo1",
+        "key2":"hello2",
+        "key3":"Hello3"
+    };
+    console.log(obj.hasOwnProperty("key1"));    //true
+    console.log(obj.hasOwnProperty("key2"));    //true
+    console.log(obj.hasOwnProperty("key3"));    //true
+    console.log(obj.hasOwnProperty("key4"));    //false
+</script> -->
+
+<!-- <script>
+    let obj={
+        
+    };
+    //check obj is empty or not
+    //rem this Object.keys(obj) syntax
+    Object.keys(obj).length===0?console.log("Empty"):console.log("Not Empty");
+    Object.values(obj).length===0?console.log("Empty"):console.log("Not Empty");
+</script> -->
+
+
+<!-- IMP: To convert json obj to array we use entries -->
+<!-- <script>
+    let obj={
+        "a":"b",
+        "c":"d",
+        "e":"f"
+    };
+    let arr=Object.entries(obj); //Convert obj to array
+    console.log(arr);
+</script> -->
+
+
+<!-- Important: Object.assign is used for concatination -->
+<!-- <script>
+    let obj1={
+        "key1":"Hello1"
+    };
+    let obj2={
+        "key2":"Hello2"
+    }
+    let obj3={
+        "key3":"Hello3"
+    }
+    console.log(Object.assign(obj1,obj2,obj3));
+</script> -->
+
+<!-- <script>
+    let arr=[100,200,300,400,500];
+    console.log(
+        arr.filter((ele)=>{
+            return ele>=300;
+        })
+    );
+</script> -->
+
+<!-- <script>
+    let arr=[100,200,300,400,500];
+    console.log(
+        arr.filter((element)=>{
+            return element<=300;
+        }).map((ele)=>{
+            return {"key":ele};
+        })
+    );
+</script> -->
+
+
+<!-- <script>
+    let arr=[
+        {"price":100},
+        {"price":200},
+        {"price":300},
+        {"price":400}
+    ];
+    console.log(
+        arr.filter((ele)=>{
+            return ele.price>=300;
+        })
+    );
+</script> -->
+
+<script>
+    let key1="Hello1";  //key=value
+    let key2="Hello2";
+    let obj={
+        key1,
+        key2            //taking both key and value
+    };
+    console.log(obj);   //{key1: 'Hello1', key2: 'Hello2'}
+</script>
