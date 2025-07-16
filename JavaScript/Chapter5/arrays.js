@@ -100,6 +100,8 @@ arr1.splice(4,0,4);
 console.log(arr1);  //[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] */
 
 
+
+/*
 //map()
 //used to manipulate each element
 console.log(
@@ -147,3 +149,105 @@ console.log(
         return ele.e_name==="Ajay" ? {"e_id":444,"e_name":"Suresh","e_sal":4000}:ele;
     })
 )
+*/
+
+//reduce()
+//it is used to make the array values to single digit like sum of array values
+//The process is first 1 will store in firstEle, and 2 will store in accu 1+2=3, 3 will store in firstEle, 3+3(next ele)=6,again stored in firstEle,6+4=10,10+5=15
+/* console.log(
+    [1,2,3,4,5].reduce((firstElement,accumlator)=>{     //any thing can be written not only firstElement,accumilator
+        return firstElement+accumlator;
+    })  //15
+)
+
+
+console.log(
+    [100,200,300,400,500].reduce((firstElement,accumlator)=>{     //any thing can be written not only firstElement,accumilator
+        return firstElement+accumlator;
+    })  //1500
+)
+ */
+
+/* console.log(
+    [1,2,3,4,5].map((ele,ind)=>{
+        return ele*100;
+    }).filter((ele,i)=>{
+        return ele>=100;
+    }).reduce((firstele,accu)=>{
+        return firstele+accu;
+    })
+) */   //1500
+
+/* console.log(
+    ["javascript","to","welcome"].reduceRight((firstele,acc)=>{
+        return firstele+" "+acc;
+    })      
+) */
+
+
+//REM: splice and slice both are different slice cut directly but splice will print after that elements also
+//slice means give only that elements but splice means gives remaining elements
+//index will be negative also -1,-2,-3,... from backside i.e from 100
+//100=-1,90=-2,80=-3
+/* let arr1=[10,20,30,40,50,60,70,80,90,100];
+console.log(arr1.slice(4,6))   //[ 50, 60 ] //4 included and 6 exclued in index
+console.log(arr1.slice(7,9));   //[80,90] //7 means 80 included and 8 means 90 included but 9 is not included i.e 100
+console.log(arr1.slice(0,1));   //[10]
+console.log(arr1.slice(9,10));  //[100]
+console.log(arr1.slice((1,4))); //[20,30,40]
+console.log(arr1.slice(-6,-4)); //[50,60] -from backside
+console.log(arr1.slice(-10,-9));  //[10]
+console.log(arr1.slice(-1));    //100
+console.log(arr1.slice(-4,-1));//70,80,90 */
+
+
+//if [[]] is used then only use flat(1), if more than one use flat(Infinity) 
+/* console.log(
+    [[1],[2],[3]].flat(1)
+) // Output: [1, 2, 3]
+
+let result = [
+    [[[[[[[[1]]]]]]]],
+    [[[[[[[[2]]]]]]]],
+    [[[[[[[[[[[[3]]]]]]]]]]]]
+].flat(Infinity);
+
+console.log(result);  */// Output: [1, 2, 3]
+
+
+//imp
+/* let arr1=[1,2,3]
+let arr2=["one","two","three"]
+console.log(
+    arr1.map((ele,ind)=>{
+        return [ele,arr2[ind]];      
+    })  //[ [ 1, 'one' ], [ 2, 'two' ], [ 3, 'three' ] ]
+) */
+
+
+//here we are making it individual array
+/* let arr1=[1,2,3]
+let arr2=["one","two","three"]
+console.log(
+    arr1.map((ele,ind)=>{
+        return[ele,arr2[ind]];
+    }).flat(Infinity)   //[ 1, 'one', 2, 'two', 3, 'three' ]
+) */
+
+//instead of using two function like map and flat use flatMap()
+/* let arr11=[1,2,3]
+let arr22=["one","two","three"]
+console.log(
+    arr1.flatMap((ele,ind)=>{
+        return[ele,arr2[ind]];
+    })   //[ 1, 'one', 2, 'two', 3, 'three' ]
+) */
+
+//part-4
+
+
+
+
+
+
+
