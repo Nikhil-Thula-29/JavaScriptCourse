@@ -105,7 +105,7 @@
     );
 </script> -->
 
-<script>
+<!-- <script>
     let key1="Hello1";  //key=value
     let key2="Hello2";
     let obj={
@@ -113,4 +113,35 @@
         key2            //taking both key and value
     };
     console.log(obj);   //{key1: 'Hello1', key2: 'Hello2'}
-</script>
+</script> -->
+
+<!-- part-4 -->
+<!-- JSON Server -->
+<!-- rest apis
+ GET,POST,PUT,DELETE
+ JSON server by default running on port number "3000"
+ we will install JSON server by following command
+ npm install -g json-server
+ npm stands for node packaging manager
+ -g stands for global installation
+we will load the data in JSON server by using following command
+json-server --watch data.json(need to create data.json)
+we will test rest apis with postman 
+create a file name called data.json-->
+<!-- this is so much imp-> json-server --watch data.json and use post man -->
+
+
+
+<!-- GET->http://localhost:3000/products
+POST->http://localhost:3000/products
+PATCH->http://localhost:3000/products/4
+DELETE->http://localhost:3000/products/6
+GET->http://localhost:3000/products?_sort=id
+This is used for sorting the data in descending order rem ?_sort=id (_ is imp)
+http://localhost:3000/products?_sort=id&_order=desc (for desc) -->
+<!-- http://localhost:3000/employees/111
+http://localhost:3000/employees?sal=4000
+http://localhost:3000/employees?_start=0&_end=3 (index based and from 3 excluded)
+http://localhost:3000/employees?id_ne=111(ne=not equal to)
+http://localhost:3000/employees?q=111
+lte->lessthanorequalto -->
