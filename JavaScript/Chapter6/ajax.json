@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "111",
+      "pname": "pone",
+      "pcost": 1000
+    },
+    {
+      "id": "222",
+      "pname": "ptwo",
+      "pcost": 2000
+    },
+    {
+      "id": "333",
+      "pname": "pthree",
+      "pcost": 3000
+    },
+    {
+      "id": "444",
+      "pname": "pfour",
+      "pcost": 4000
+    },
+    {
+      "id": "555",
+      "pname": "pfive",
+      "pcost": 5000
+    },
+    {
+      "id": "666",
+      "pname": "psix",
+      "pcost": 6000
+    },
+    {
+      "id": "777",
+      "pname": "psevenmodified",
+      "pcost": 70
+    }
+  ]
+}

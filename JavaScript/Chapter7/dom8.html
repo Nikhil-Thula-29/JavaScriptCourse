@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom8</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+
+    <div id="my_div"></div>
+    <div id="my_div"></div>
+    <div id="my_div"></div>
+    <div id="my_div"></div>
+    <div id="my_div"></div>
+
+    <div class="c1"></div>
+    <div class="c1"></div>
+    <div class="c1"></div>
+    <div class="c1"></div>
+    <div class="c1"></div>
+    <script>
+        document.write("Inside write method through script");  //It is used to print on screen thorugh script tags
+        document.getElementsByTagName("p")[0].innerHTML="<strong>Hellloo</strong>";  
+        document.getElementById("my_div");
+        document.getElementsByClassName("c1")[1].innerHTML="Working";
+    </script>
+</body>
+</html>

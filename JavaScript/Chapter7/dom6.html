@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom6</title>
+</head>
+<body>
+    <!-- These are called data attributes -->
+    <h1 data-text1="hello1" data-text2="hello2">Helloo</h1>
+
+    <script>
+        const h1=document.querySelector("h1");
+        console.log(h1.dataset);
+        console.log(h1.dataset.text1,h1.dataset.text2);
+
+        h1.dataset.text3="hello3";
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom5</title>
+</head>
+<body>
+
+    <div>
+        <span id="sp1" title="hello">Span1</span>
+        <span id="sp2">Span2</span>
+    </div>
+
+    <script>
+        const div=document.querySelector("div");
+        const span1=document.querySelector("#sp1");
+        const span2=document.querySelector("#sp2");
+
+        //to remove span 
+        //1st solution
+        /* span1.remove();
+        span2.remove(); */
+
+
+        //2nd solution
+        //div.removeChild(span1);
+        //div.removeChild(span2);
+
+
+        //to read attributes
+        //how to access attributes like id,title
+        console.log(span1.getAttribute("id"));
+        console.log(span1.getAttribute("title"));
+        console.log(span2.getAttribute("id"));
+        //new method
+        console.log(span1.id);
+        console.log(span1.title);
+        console.log(span2.id);
+
+
+        //add the attributes
+        span1.setAttribute("key1","value1");//to apply new attribute check in inspect elements
+        console.log(span1.getAttribute("key1"));
+
+        //to remove attribute
+        //span1.removeAttribute("id");
+    </script>
+</body>
+</html>

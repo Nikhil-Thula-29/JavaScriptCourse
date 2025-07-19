@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>DEMO</title>
+<head>
+<body>
+<h1>Hello</h1>
+<h2>Helloooooooo</h2>
+</body>
+</html>
+
+Whenever we load html it will load into browser ,loaded sucessfull browser engine will create object 
+it is called document object or DOM object
+Inside DOM we have tree structure like html tag is having two child nodes i.e head and body and that head is acting parent node for title,
+in same way body is acting parent for h1 and h2 inside it is having data like tree structure.
+HTML tag->root/parent node
+head and body node children of html tag
+title,h1,h2 are child nodes for head and body and html is the grand parent of those h2,h1,title
+for ref see above structure.
+HTML,TITLE,HEAD,BODY ARE nodes
+Demo,Hello,Hellooooooo are node text
+Changing h2 to h3 or any changing in dom is called dom manipulations or dom traverse.

@@ -246,8 +246,172 @@ console.log(
 //part-4
 
 
+//findIndex()
+//start
+/* console.log(
+    [1,2,3,4,5].findIndex((ele,ind)=>{
+        return ele==4;  //3
+    })
+)
+
+
+console.log(
+    [10,20,30,40,50,60,70,80,90,100].findIndex((elem,inde)=>{
+        return elem==60 //5
+    })
+)
+
+//if element is not there then it will be -1
+console.log(
+    [10,20,30,40,50,60,70,80,90,100].findIndex((elem,inde)=>{
+        return elem==5 //-1
+    })
+)
+
+
+let arr1=[10,20,30,40,50];
+//arr1.splice(2,1);
+//console.log(arr1);  //[ 10, 20, 40, 50 ]
+arr1.splice(arr1.findIndex((ele,ind)=>{
+    return ele==30; 
+}),1);  //[ 10, 20, 40, 50 ]  rem here 1 is also req this used when index no is unknown
+console.log(arr1);
 
 
 
+let arr2=[10,100,1000,10000,20,200,2000,20000];
+//arr2.splice(4,1);
+//console.log(arr2);
+arr2.splice(arr2.findIndex((ele,ind)=>{
+    return ele==20
+}),1);
+console.log(arr2);  //[10,100,1000,10000,200,2000,20000];
 
+
+let arr3=[
+    {"eid":111,"ename":"eone","esal":1000},
+    {"eid":222,"ename":"etwo","esal":2000},
+    {"eid":333,"ename":"ethree","esal":3000},
+    {"eid":444,"ename":"efour","esal":4000},
+    {"eid":555,"ename":"efive","esal":5000}]
+arr3.splice(arr3.findIndex((ele,index)=>{
+    return ele.eid==333;
+}),1)   //rem ,1
+console.log(arr3);  //o/p expect 3000 every thing will print
+ */
+//End
+
+
+//some()
+//if atleast one element also it finds then it give true as o/p if not found any one it gives false
+/* console.log(
+    [1,2,3,4,5].some((ele,ind)=>{
+        return ele<=1;
+    })  //true
+)
+
+console.log(
+    [1,2,3,4,5].some((ele,ind)=>{
+        return ele>=1;
+    })  //true  here also atleast one is satisfied then gives true
+) */
+
+
+
+//every()
+//In every every element has satify the condition then only it is going to give true
+/* console.log(
+    [1,2,3,4,5].every((ele,ind)=>{
+        return ele<=5;
+    })  //true
+)
+
+console.log(
+    [1,2,3,4,5].every((ele,ind)=>{
+        return ele<=2;
+    })  //false here only 1,2 is satifying so it is giving false  
+) */
+
+
+//find()
+//If element is present then it return the same ele if not undefined
+/* console.log(
+    [1,2,3,4,5].find((ele,ind)=>{
+        return ele==3;  
+    })  //3
+)
+
+
+console.log(
+    [1,2,3,4,5].find((ele,ind)=>{
+        return ele==35;
+    })
+)   //undefined */
+
+
+
+//fill()
+//It will replace all the elements with selected item like 100
+//(200,1) replace all elements by 200 from index 1 to end
+/* let arr1=[1,2,3,4,5];   
+console.log(arr1.fill(100));    //[ 100, 100, 100, 100, 100 ]
+console.log(arr1.fill(200,1));  //[ 100, 200, 200, 200, 200 ]
+console.log(arr1.fill(300,2));  //[ 100, 200, 300, 300, 300 ]
+console.log(arr1.fill(400,3));  //[ 100, 200, 300, 400, 400 ]
+console.log(arr1.fill(500,4));  //[ 100, 200, 300, 400, 500 ]
+console.log(arr1.fill(600,1,3));   //[ 100, 600, 600, 400, 500 ]    here 1 index and 3 is excluded 
+ */
+
+
+//Important
+//indexOf()
+//It repeat the index of elements of whose values are duplicated
+//It is used to remove the duplicate from array
+//[1,2,2,1,3,4,5]-->Array
+//[0,1,1,0,5,6,7]-->Index of above array
+let arr1=[10,20,30,10,40,10,20,50];
+arr1.forEach((ele,ind)=>{
+    console.log(arr1.indexOf(ele),ind);
+    console.log("---------------------");
+})  //0,1,2,0,4,0,1,7   //repeated elements index repeated
+
+//o/p
+/* 0 0
+---------------------
+1 1
+---------------------
+2 2
+---------------------
+0 3
+---------------------
+4 4
+---------------------
+0 5
+---------------------
+1 6
+---------------------
+7 7
+--------------------- */
+
+let arr2=[10,20,30,10,20,30];
+arr2.forEach((ele,ind)=>{
+    console.log(arr2.indexOf(ele),ind);
+})  
+/* o/p
+0 0
+1 1
+2 2
+0 3
+1 4
+2 5 */
+
+
+
+//Important
+let arr3=[100,200,300,100,200,300];
+console.log(
+arr3.filter((ele,ind)=>{
+    return arr3.indexOf(ele)==ind;
+})
+);  //[ 100, 200, 300 ] by this we can remove duplicates
 

@@ -1,0 +1,77 @@
+<!-- DOM Manipulations -->
+ <!-- DOM stands for Document object model -->
+<!-- The DOM is a tree-like structure that represents the content of a webpage.
+It allows JavaScript to interact with and change HTML and CSS. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+</head>
+<body>
+
+    <div>
+       <span>Hello</span>
+       <span style="display:none";>Bye</span>
+    </div>
+
+    <script>
+
+        /***********************************/
+        //The main diff b/w innerText and textcontent is 
+        //innerText shows only which is printing on screen i.e if we add any style like display:none
+        //then it wont show in innerText but whereas in textContent it shows all even if display is none also.
+        /* const div=document.querySelector("div");
+        console.log("By innerText ",div.innerText);
+        console.log("By textContent ",div.textContent); */
+        /***********************************/
+
+
+        /***********************************/
+        /* const body=document.body;
+        body.append("Helloo");
+        body.append("Hii");
+        body.append("hiii");
+        body.append("dfsd"); */
+        /***********************************/
+
+
+        /***********************************/
+       /*  const body=document.body;
+        const div= document.createElement("div");      //creating div
+        div.innerHTML="Yes added";
+        //body.append(div);  //or
+        body.appendChild(div); */
+        /***********************************/
+
+        /***********************************/
+        /* const body=document.body;
+        body.append("Hellloo");
+        const div=document.createElement("div");
+        div.innerHTML="Hiiii";
+        body.append(div); */
+        /***********************************/
+
+
+
+        /***********************************/
+        /* const body=document.body;
+        //body.innerText="Hello1";
+        //body.textContent="Hello2";
+        const div=document.createElement("div");
+        div.innerText="Hello1";
+        div.innerText="Hello2";   //high priority for text content compared to innerHtml so overrding hello1
+        body.append(div); */
+        /***********************************/
+
+
+        //To apply html effects use body.innerHTML
+        const body=document.body;
+        //body.innerText="<h1>Hello</h1>";
+        body.innerHTML="<h1>Helloo</h2>";
+
+    </script>
+</body>
+</html>
