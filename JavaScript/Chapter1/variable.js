@@ -2,7 +2,7 @@
 for(var i=0;i<5;i++){
     
 }
-console.log(i);//var:5 //let:error i is not defined
+console.log(i);//var:5 //let:error i is not defined i cant not give out side thelooop scope
 
 //var keyword breaks the scope rule
 //let keyword obeys the scope rule

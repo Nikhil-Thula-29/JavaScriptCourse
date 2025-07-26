@@ -1,0 +1,85 @@
+<!-- A closure is a function that remembers the variables from its outer scope, even after the outer function has finished executing.
+OR
+The function with its lexical scope(out the scope) called as closure.
+ -->
+
+<!--  <script>
+    function fun_one(){
+        var x=10;
+        function fun_two(){
+            console.log(x); //actually x is not in function two but still is printing 10 this is called clouser
+        }
+        fun_two();
+    };
+    fun_one();  //10
+ </script> -->
+
+
+<!--  <script>
+    function fun_one(){
+        var x=100;
+        function fun_two(){
+            var y=200;
+            function fun_three(){
+                console.log(x);
+                console.log(y);
+            };
+            fun_three();
+        }
+        fun_two();
+    }
+    fun_one();
+ </script> -->
+
+<!--  <script>
+    function fun_one(){
+        var y=100;
+        var x=function fun_two(){
+            console.log(y);
+        }
+        return x;
+    }
+    var def=fun_one();
+    def();
+ </script> -->
+
+<!--  <script>
+    function grandparent(){
+        var land="100acres";
+        var money="1cr";
+        var x=function parent(){
+            console.log(land);
+             
+            var y=function child(){
+                console.log(money);
+            }
+            return y;
+        }
+        return x;
+    }
+    var parent=grandparent();   //
+    var child=parent();
+   //parent();
+    child();
+ </script> -->
+
+
+ <!-- <script>
+    function fun_one(){
+        var x=100;
+        setTimeout(()=>{
+            console.log(x);
+        },5000);
+    }
+    fun_one();
+ </script> -->
+
+ <script>
+    for(var i=1;i<=5;i++){
+        setTimeout(()=>{
+            console.log(i);
+        },5000);    //first Hello and 6 (five times)
+    }
+    //Internally browser memory setTimeout store function def not output in memory and due to var 6 that is the first output is hello and 6 five times 
+    console.log("Hello");
+ </script>

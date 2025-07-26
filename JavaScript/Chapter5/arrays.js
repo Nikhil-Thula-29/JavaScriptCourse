@@ -415,3 +415,40 @@ arr3.filter((ele,ind)=>{
 })
 );  //[ 100, 200, 300 ] by this we can remove duplicates
 
+
+
+
+let numbers = [5, 3, 8, 1, 9];
+numbers.sort((a, b) => a - b);  // Ascending order
+console.log(numbers);  // [1, 3, 5, 8, 9]
+
+
+let numbers2 = [5, 3, 8, 1, 9];
+console.log(numbers2.sort((a, b) => a - b)[1]); //3
+
+
+let numbers1 = [5, 3, 8, 1, 9];
+numbers1.sort((a, b) => b - a);  // Descending
+console.log(numbers1);  // [9, 8, 5, 3, 1]
+
+
+
+
+let fruits = ["banana", "apple", "mango", "cherry"];
+fruits.sort();  // Alphabetical
+console.log(fruits);  // ["apple", "banana", "cherry", "mango"]
+
+
+let users = [
+  { name: "John", age: 30 },
+  { name: "Alice", age: 22 },
+  { name: "Bob", age: 25 }
+];
+
+users.sort((a, b) => a.age - b.age);
+console.log(users);
+// [
+//   { name: "Alice", age: 22 },
+//   { name: "Bob", age: 25 },
+//   { name: "John", age: 30 }
+// ]

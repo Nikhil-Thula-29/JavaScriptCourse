@@ -1,0 +1,35 @@
+scenario-1
+<html>
+    <head>
+        <script src="demo.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+In this scenarion js will execute line by line it came upto line 3 and in line four found 
+js link then html execution stops which is not good to use at the end.
+
+scenario-2
+<html>
+    <head>
+        <script async src="demo.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+In this scenario js will execute upto head and find script link and find async keyword
+this creates new child thread execute js file with other thread which is not correct override or issues will occurances
+
+scenarion-3
+<html>
+    <head>
+        <script defer src="demo.js"></script>
+    </head>
+    <body>
+
+    </body>
+</html>
+In this scenario defer keyword makes the html execution along with js fetching rem fetching
+if js fetching succes then html exeution stops and executes js and after that html executes.

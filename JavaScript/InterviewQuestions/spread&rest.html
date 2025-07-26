@@ -1,0 +1,67 @@
+<!--
+ES6
+******
+...  => spread
+     => rest
+
+-->
+
+<!-- <script>
+    let arr1=[1,2,3];
+    let arr2=[4,5,6];
+    let arr3=[...arr1,...arr2]; //spread operator in adding arrays
+    console.log(arr3);  //1,2,3,4,5,6
+</script> -->
+
+<!-- <script>
+    let obj1={
+        "name":"Nikhil",
+        "sub":"Java",
+        "course":5000
+    }
+    let obj2={
+        /* "name":"Nikhil",
+        "sub":"React",
+        "course":5000 */
+        //instead of writing name and course for 2 times use spread operator
+        ...obj1,    //spread operator
+        "sub":"React"
+    }
+    console.log(obj1);  //{name: 'Nikhil', sub: 'Java', course: 5000}   
+    console.log(obj2);  //{name: 'Nikhil', sub: 'React', course: 5000} 
+</script> -->
+
+
+<!-- If we use spread operator with function then it is called rest operator -->
+<!-- <script>
+    function fun_one(...n){
+        console.log(n);
+    }
+    fun_one(10);    //[10]
+    fun_one(10,20); //(2) [10, 20]
+</script> -->
+
+
+<!-- <script>
+    function fun_one(arg1,arg2,arg3,...rest){
+        console.log(arg1,arg2,arg3,...rest);
+    }
+    fun_one(10,20,30,40);   //10 20 30 40
+    fun_one(10,20,30,40,50); //10 20 30 40 50 
+</script> -->
+
+<!-- <script>
+    function fun_one(...n){
+        console.log(n);     //[]
+    }
+    fun_one();
+</script> -->
+
+<script>
+    function fun_one(){
+        //console.log(arguments);   //Arguments(5) [10, 20, 30, 40, 50, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+       let arr=Array.prototype.slice.call(arguments,0);
+       console.log(arr);    //5) [10, 20, 30, 40, 50]
+    };
+    fun_one(10,20,30,40,50);    
+</script>

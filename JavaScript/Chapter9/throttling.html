@@ -1,0 +1,32 @@
+<!-- throttling means if we want result after 5 sec but we click after 3 sec then it wont show then it will take again 5 sec from starting not got an exact idea -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttling</title>
+</head>
+<body>
+    <button id="my_btn">Click Me</button>
+</body>
+<script>
+    const throttle=(fn,delay)=>{
+        let last=0;
+        return function(...args){
+            let now=new Date().getTime();
+            console.log(now);
+            if(now-last<delay){
+                console.log(now-last<delay);
+                return;
+            }
+            last=now;
+            return fn(...args);
+        }
+    }
+
+    document.getElementById("my_btn").addEventListener("click",throttle((event)=>{
+        console.log("Hellooo");
+    },5000))
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!-- debouncing is the process cancelling the old requests and considering the new requests
+if we press submit button but it takes 5 sec to fetch data but before that only you clicked again 
+then timer reset and take the new request from starting 5 sec again -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing</title>
+</head>
+<body>
+    <button id="my_btn">Click Me!</button>
+</body>
+<script>
+    const debounce=(fn,delay)=>{
+        let timer;
+        if(timer){
+            clearTimeout(timer);
+        }
+        return function(...args){
+            timer=setTimeout(()=>{
+                fn(...args);
+            },delay);
+        }
+    }
+
+    document.getElementById("my_btn").addEventListener("click",debounce(event=>{
+        console.log("debouncing");
+    },5000));
+</script>
+</html>
