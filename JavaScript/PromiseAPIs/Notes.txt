@@ -1,0 +1,38 @@
+
+1.
+Promise.all -->It take array of promises and return the array of promises after the highest time taken promise 
+ex:
+promise.all([p1,p2,p3]);
+p1 takes 3 secs , p2 takes 1sec , p3 takes 2secs it returns array of promises after 3secs that is highest time taken promise to settle.
+
+for fail case
+promise.all([p1,p2,p3]);
+p1 takes 3 secs , p2 takes 1sec and fails , p3 takes 2secs it returns error after 1sec bcz of p2, if p3 fails then it may take 2secs.
+
+
+2.
+promise.allsetteled([p1,p2,p3]);
+p1->3secs
+p2->1sec
+p3->2secs
+wait for all promises to settle and after that it returns array of promises even it is failure or rejects 
+in promise.all if error it will give direct error but in setteled it will give all the promises which are not giving error also i.e size of passed array and output array size will be same.
+it returns object array
+
+3.
+promise.race(p1,p2,p3);
+it give only 1 promise which takes less time if p3 takes less time then it output will be direct p3 i.e less time taken promise.
+here even if less time taken promise fails then output will be error it wont give successfull promise it wont wait
+if first is failure gives error or if success give that promise 
+
+4.
+promise.any(p1,p2,p3)
+here it wait for successful promise if less time taken promise fails then it wait for successful promise and returns that successful promise only.
+but in case of race even if firstone is failure or success it gives in this case it waits for successful promise only.
+if all fails it give the aggregate error.
+
+
+diff b/w all and race is if error comes in all then it gives direct error same as race but if it pass then it gives array of promises
+but in race we will get only one promise even if it is fail or pass.
+
+the value of first setteled value in case of race def of promise.race().
